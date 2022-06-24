@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_5.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_6.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Transparent PNG/01_idle/skeleton-01_idle_0.png" type="Texture" id=7]
+[ext_resource path="res://Petey/Petey.gd" type="Script" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.273, 11 )
+
+[node name="Petey" type="KinematicBody2D"]
+scale = Vector2( 0.06, 0.06 )
+script = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 25.6667, -207.667 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -7.66666, -116 )
+scale = Vector2( 18.3333, 10.3333 )
+shape = SubResource( 2 )
