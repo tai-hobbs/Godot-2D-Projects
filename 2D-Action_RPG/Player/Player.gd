@@ -7,6 +7,8 @@ const FRICTION = 800
 var velocity = Vector2.ZERO
 
 onready var animPlayer = $AnimationPlayer
+onready var animTree = $AnimationTree
+onready var animState = animTree.get("parameters/playback")
 
 func _physics_process(delta):
 	move_player(delta)
@@ -20,13 +22,12 @@ func move_player(delta):
 	input_vector = input_vector.normalized() 
 	
 	if input_vector != Vector2.ZERO:
-		if input_vector.x > 0:
-			animPlayer.play("runRight")
-		else:
-			animPlayer.play("runLeft")
+		animTree.set("parameters/Idle/blend_position", input_vector)
+		animTree.set("parameters/Run/blend_position", input_vector)
+		animState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
-		animPlayer.play("idleRight")
+		animState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	velocity = move_and_slide(velocity)
