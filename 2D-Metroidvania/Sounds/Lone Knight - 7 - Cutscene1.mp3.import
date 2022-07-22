@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lone Knight - 7 - Cutscene1.mp3-8cf2db47cc05ac5d83c434b02f5233e7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Lone Knight - 7 - Cutscene1.mp3"
+dest_files=[ "res://.import/Lone Knight - 7 - Cutscene1.mp3-8cf2db47cc05ac5d83c434b02f5233e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

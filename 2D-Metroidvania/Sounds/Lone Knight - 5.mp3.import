@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lone Knight - 5.mp3-5bb41683796477cc9244d304319d329d.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Lone Knight - 5.mp3"
+dest_files=[ "res://.import/Lone Knight - 5.mp3-5bb41683796477cc9244d304319d329d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

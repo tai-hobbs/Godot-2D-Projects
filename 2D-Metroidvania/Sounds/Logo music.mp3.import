@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Logo music.mp3-8a0f4dd28a4cb55971fb201407fec5e6.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Logo music.mp3"
+dest_files=[ "res://.import/Logo music.mp3-8a0f4dd28a4cb55971fb201407fec5e6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
